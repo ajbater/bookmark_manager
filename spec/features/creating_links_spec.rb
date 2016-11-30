@@ -2,10 +2,6 @@ require 'spec_helper'
 
 feature 'Submitting new link', :type => :feature do
 
-  before(:each) do
-    Links.create(url: 'http://www.makersacademy.com', title: "Makers Academy")
-  end
-
   scenario 'We want to submit link into list' do
     visit '/links/new'
     fill_in("Link", with: "http://www.makersacademy.com")
