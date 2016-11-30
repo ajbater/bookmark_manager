@@ -9,7 +9,7 @@ feature 'Submitting new link', :type => :feature do
     fill_in("tags", with: "Coding")
 
     click_button("Submit")
-    link = Links.first
+    link = Link.first
     expect(link.tags.map(&:name)).to include('Coding')
   end
 end
